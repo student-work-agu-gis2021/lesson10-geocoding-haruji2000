@@ -127,7 +127,13 @@ seibu = join.loc[join["name"] == "Seibu Shibuya Store"]
 azabu = join.loc[join["name"] == 'National Azabu']
 
 # YOUR CODE HERE 11 to report how many people live within 1.5 km distance from each shopping center
+tokyu_sum=round(tokyu["PTN_2020"].sum())
+seibu_sum=round(seibu["PTN_2020"].sum())
+azabu_sum=round(azabu["PTN_2020"].sum())
 
+print("Tokyu Department Store :"+str(tokyu_sum))
+print("Seibu Shibuya Store :"+str(seibu_sum))
+print("National Azabu :"+str(azabu_sum))
 # **Reflections:**
 #     
 # - How challenging did you find problems 1-3 (on scale to 1-5), and why?
