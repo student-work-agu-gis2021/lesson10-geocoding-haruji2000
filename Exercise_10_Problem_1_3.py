@@ -103,8 +103,13 @@ print(geodata.head())
 # 
 
 # YOUR CODE HERE 9
+pop=None
 # Read population grid data for 2018 into a variable `pop`. 
-
+pop=gpd.read_file(r"data/500m_mesh_suikei_2018_shape_13/500m_mesh_2018_13.shp")
+pop = pop[["PTN_2020", "geometry"]]
+geodata = geodata.to_crs(pop.crs)
+print(pop.crs)
+print(geodata.crs)
 #TEST CODE
 # Check your input data
 print("Number of rows:", len(pop))
